@@ -1,0 +1,178 @@
+.header {
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+ position: relative;
+
+ @include media-md {
+  padding: 3rem 3rem;
+ }
+ @include media-lg {
+  padding: 3rem 6rem;
+ }
+ @include media-xl {
+  padding: 3.2rem 10.5rem;
+ }
+
+ .nav {
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 1.5rem;
+  right: 1.5rem;
+  transform: translateX(-200%);
+  background: $Very-Dark-Blue;
+  border-radius: 8px;
+  transition: transform .4s ease-in;
+  @include media-md {
+   height: 0;
+   transform: translateX(0);
+   position: static;
+   flex: 1;
+   // display: flex;
+   background: 0;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+  }
+
+  ul {
+   display: flex;
+   align-items: center;
+   margin: 0;
+   flex-direction: column;
+   gap: 1.5rem;
+   padding: 0 0 2rem 0;
+
+   @include media-md {
+    padding: 0;
+    flex-direction: row;
+    gap: 0;
+   }
+   li {
+    list-style-type: none;
+    padding: 0 1rem;
+    a {
+     color: #fff;
+     text-decoration: none;
+     font-size: 1.2rem;
+     font-weight: 700;
+
+     @include media-md {
+      font-size: .9rem;
+      color: $Grayish-Violet;
+     }
+     @include media-lg {
+      color: $Grayish-Violet;
+      font-size: 1rem;
+     }
+    }  
+   }
+  }
+  .account {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   justify-content: center;
+   padding: 2rem 1.5rem 0 1.5rem;
+   border-top: 1px solid $Gray;
+   @include media-md {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    gap: 1rem;
+   }
+
+   .log-in {
+    @include button;
+    color: $Grayish-Violet;
+    padding: .7rem 1.4rem;
+    background: 0;
+    @include media-md {
+     font-size: .9rem;
+     padding: .5rem .8rem;
+    }
+    @include media-xl {
+     font-size: 1rem;
+     padding: .7rem 1.4rem;
+    }
+   }
+   .sign-up {
+    @include button;
+    padding: .7rem 1.4rem;
+    @include media-md {
+     font-size: .9rem;
+     padding: .5rem .8rem;
+    }
+    @include media-xl {
+     font-size: 1rem;
+     padding: .7rem 1.4rem;
+    }
+   }
+  } 
+ }
+
+ @media only screen and (max-width:767px) {  
+  .nav-open {
+   transform: translateX(0);
+  }
+ }
+
+ .logo {
+  width: 121px;
+  height: 33px;
+
+  img {
+   width: 100%;
+   height: 100%;
+  }
+ }
+
+ .menu {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  .burger {
+   width: 24px;
+   height: 3px;
+   background: $Grayish-Violet;
+   position: relative;
+   border-radius: 5px;
+   cursor: pointer;
+   @include media-md {
+    display: none;
+   }
+ 
+   &:before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 3px;
+    top: -9px;
+    background: $Grayish-Violet;
+    border-radius: 5px;
+   }
+   &:after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 3px;
+    top: 9px;
+    background: $Grayish-Violet;
+    border-radius: 5px;
+   }
+  }
+ }
+}

@@ -1,0 +1,53 @@
+.footer {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 3.5rem 0;
+ background: $Very-Dark-Violet;
+ text-align: center;
+
+ @include media-lg {
+  padding: 4rem 6rem;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+ }
+ @include media-xl {
+  padding: 4rem 10.5rem;
+ }
+ .footer-nav {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 2rem 0 2rem 0;
+
+  @include media-lg {
+   margin: 0 0 1.5rem 0;
+  }
+ }
+
+ .nav-link {
+  margin: .7rem 0;
+  a {
+   color: $Dark-Violet;
+   color: $Gray;
+   text-decoration: none;
+  }
+ }
+
+ .social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 0 0;
+  @include media-lg {
+   padding: 0;
+  }
+
+  .icon {
+   margin: .7rem;
+  }
+ }
+}

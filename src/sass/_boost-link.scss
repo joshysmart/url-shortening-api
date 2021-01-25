@@ -1,0 +1,29 @@
+.boost-link {
+ width: 100%;
+ height: 300px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ background: $Dark-Violet;
+ background-image: url('../images/bg-boost-mobile.svg');
+ background-repeat: no-repeat;
+
+ @include media-md {
+  height: 250px;
+  background-image: url('../images/bg-boost-desktop.svg');
+ }
+ h2 {
+  font-size: 1.7rem;
+  color: #fff;
+
+  @include media-lg {
+   font-size: 2.5rem;
+   margin: 0 0 1.5rem 0;
+  }
+ }
+
+ .button {
+  @include button;
+ }
+}
